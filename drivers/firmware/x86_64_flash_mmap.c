@@ -67,7 +67,7 @@ static int __init flash_mmap_init(void)
 	}
 
 	ret = kobject_add(kobj_ref, firmware_kobj, "flash_mmap");
-	if (retval) {
+	if (ret) {
 		pr_err("kobject_add failed\n");
         kobject_put(kobj_ref);
     }
